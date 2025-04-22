@@ -29,6 +29,9 @@ public class RegisterUserTest {
     @Test
     void registerUser() {
         navBar.gotoHome();
+        Assertions.assertThat(navBar.isOnHomePage())
+                .as("Home page should be opened")
+                .isTrue();
         navBar.gotoSignUpLogin();
         Assertions.assertThat(loginPage.isLoginPage())
                 .as("Login page should be opened")

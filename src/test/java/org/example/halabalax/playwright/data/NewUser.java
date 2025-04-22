@@ -4,7 +4,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import com.fasterxml.jackson.annotation.JsonProperty;
 import lombok.Getter;
 
-import java.util.Date;
+import java.time.LocalDate;
 
 @Getter
 public class NewUser {
@@ -12,8 +12,9 @@ public class NewUser {
     private final String password;
     private final String firstName;
     private final String lastName;
+    private final String company;
     private final String email;
-    private final Date birthDate;
+    private final LocalDate birthDate;
     private final Prefix prefix;
     private final String country;
     private final String city;
@@ -29,8 +30,9 @@ public class NewUser {
             @JsonProperty("password") String password,
             @JsonProperty("firstName") String firstName,
             @JsonProperty("lastName") String lastName,
+            @JsonProperty("company") String company,
             @JsonProperty("email") String email,
-            @JsonProperty("birthDate") Date birthDate,
+            @JsonProperty("birthDate") LocalDate birthDate,
             @JsonProperty("prefix") Prefix prefix,
             @JsonProperty("country") String country,
             @JsonProperty("city") String city,
@@ -44,6 +46,7 @@ public class NewUser {
         this.password = password;
         this.firstName = firstName;
         this.lastName = lastName;
+        this.company = company;
         this.email = email;
         this.birthDate = birthDate;
         this.prefix = prefix;
